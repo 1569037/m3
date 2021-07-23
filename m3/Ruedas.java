@@ -26,7 +26,7 @@ public class Ruedas {
 	{
 		this();
 		this.marca=marca;
-		this.diam=diam;
+		diam(diam);
 	}
 	public Ruedas(String marca, double diam, int pos)
 	{
@@ -49,7 +49,7 @@ public class Ruedas {
 	}
 
 	public void setDiam(double diam) {
-		this.diam = diam;
+		diam(diam);
 	}
 
 	public Posicion getPos() {
@@ -76,7 +76,16 @@ public class Ruedas {
 			}
 	}
 	
+	//metodo para comprobar el diametro de la rueda
 	
-	
-	
+	private void diam(double diam)
+	{
+		if (diam>0.4 && diam<4)
+			this.diam= diam;
+		else
+		{
+			JOptionPane.showMessageDialog(null, "El diametro introducido no es correcto");
+			this.diam=0;
+		}
+	}	
 }

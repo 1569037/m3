@@ -1,4 +1,7 @@
 package m3;
+
+import javax.swing.JOptionPane;
+
 public abstract class Vehiculos {
 
 	//atributos
@@ -49,7 +52,11 @@ public abstract class Vehiculos {
 		if (cor)
 			this.matricula=matricula;
 		else
+		{
+			JOptionPane.showMessageDialog(null, "La matricula introducida no tiene el formato correcto");
 			this.matricula="ABCD123";
+		}
 	}
-	public abstract void rueda(Ruedas r);
+	public abstract void ruedaDelanteras(Ruedas r);
+	public abstract void ruedaTraseras(Ruedas r);
 }	

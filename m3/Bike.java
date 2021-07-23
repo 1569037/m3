@@ -1,20 +1,18 @@
 package m3;
-
-public class Coche extends Vehiculos {
+public class Bike extends Vehiculos{
 
 	//constructores
-	
-	public Coche()
+	public Bike()
 	{
 		super();
-		this.nRuedas = 4;
+		this.nRuedas = 2;
 		this.rueda = new Ruedas[this.nRuedas];
 	}
 	
-	public Coche(String matricula, String marca, String color)
+	public Bike(String matricula, String marca, String color)
 	{
 		super(matricula,marca,color);
-		this.nRuedas = 4;
+		this.nRuedas = 2;
 		this.rueda = new Ruedas[this.nRuedas];
 	}
 	
@@ -23,12 +21,10 @@ public class Coche extends Vehiculos {
 	public void ruedaDelanteras(Ruedas r)
 	{
 		this.rueda[0] = r;
-		this.rueda[1] = r;
 	}
 	public void ruedaTraseras(Ruedas r)
 	{
-		this.rueda[2] = r;
-		this.rueda[3] = r;
+		this.rueda[1] = r;
 	}
 	
 	
